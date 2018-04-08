@@ -9,7 +9,7 @@
 1. 二进制文本读取，参数问rb
 2. 读取文本后遇到的问题：cannot use a string pattern on a bytes-like object。编码问题，尝试decode解码成utf-8，新错误：UnicodeDecodeError: 'gbk' codec can't decode byte 0xff in position 0: illegal multibyte sequence
 3. [解决方法](https://blog.csdn.net/jieli_/article/details/70166244) chardet模块检测编码，再解码，使用方法参见代码
-4. 53558编码有问题，检测不出，跳过，如下图:![53558特殊编码](C:\Users\Administrator\Desktop\Preprocessing\Pics\53558.png)
+4. 53558编码有问题，检测不出，跳过，如下图:![编码问题](https://img-blog.csdn.net/20180408215950741?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0dhbG9h/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 5. 如果自定义了和函数/头文件重名的变量则不可调用或import，显示not callable
 6. utf-8类型的str写入文件open时需指定encoding='utf-8'
 7. [字典排序](https://blog.csdn.net/xsj_blog/article/details/51847831)：sorted返回的是一个list，其中每一项为key和value组成的元组
