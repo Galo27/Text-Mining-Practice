@@ -1,9 +1,9 @@
 # Text-Mining-Practice
 Coding Practice on Text Mining Using Python
 
-#English Text Mining: Preprocessing 
+# English Text Mining: Preprocessing 
 
-##1. Data Collection or Assembly 数据收集
+## 1. Data Collection or Assembly 数据收集
 
 【Given.】20_newsgroups.
 
@@ -17,13 +17,13 @@ Coding Practice on Text Mining Using Python
 6. utf-8类型的str写入文件open时需指定encoding='utf-8'
 7. [字典排序](https://blog.csdn.net/xsj_blog/article/details/51847831)：sorted返回的是一个list，其中每一项为key和value组成的元组
 
-##2. Data Preprocessing 数据预处理
+## 2. Data Preprocessing 数据预处理
 
-###2.1 Tokenization & Segmentation 单词化 / 语块化 分词
+### 2.1 Tokenization & Segmentation 单词化 / 语块化 分词
 
 下面基本都是单词化分词的方法。
 
-####2.1.1 Sentence Tokenize（分割句子）[1](https://blog.csdn.net/panghaomingme/article/details/55210491)
+#### 2.1.1 Sentence Tokenize（分割句子）[1](https://blog.csdn.net/panghaomingme/article/details/55210491)
 
 实际测试发现似乎没什么意义啊？*这里不是很明白。*
 
@@ -45,7 +45,7 @@ Coding Practice on Text Mining Using Python
         print(X[0])  
         news = X[0]  
   
-####2.1.2 Word Tokenize(分割单词)[1](https://blog.csdn.net/panghaomingme/article/details/55210491)
+#### 2.1.2 Word Tokenize(分割单词)[1](https://blog.csdn.net/panghaomingme/article/details/55210491)
 
     from nltk.tokenize import word_tokenize  
     text='The cat is walking in the bedroom.'  
@@ -65,15 +65,15 @@ Coding Practice on Text Mining Using Python
 
 *new york 会变成 new + york,这个是单词化而不是语块化的问题*
 
-###2.2 Normalization 数据标准化
+### 2.2 Normalization 数据标准化
 
-####2.2.1 Noise Removal 非文本数据去除
+#### 2.2.1 Noise Removal 非文本数据去除
 
 【Skip.】对于自己爬虫爬下来的文本(如HTML格式)需要做非文本数据去除。
 
 这一步主要是针对我们用爬虫收集的语料数据，由于爬下来的内容中有很多html的一些标签，需要去掉。少量的非文本内容的可以直接用Python的正则表达式(re)删除, 复杂的则可以用beautifulsoup来去除。另外还有一些特殊的非英文字符(non-alpha),也可以用Python的正则表达式(re)删除。
 
-####2.2.2 Spell Check 拼写检查
+#### 2.2.2 Spell Check 拼写检查
 
 【Skip.】由于英文文本中可能有拼写错误，因此一般需要进行拼写检查。如果确信我们分析的文本没有拼写问题，可以略去此步。
 
@@ -94,7 +94,7 @@ Coding Practice on Text Mining Using Python
 
 找出错误后，我们可以自己来决定是否要改正。当然，我们也可以用pyenchant中的wxSpellCheckerDialog类来用对话框的形式来交互决定是忽略，改正还是全部改正文本中的错误拼写。大家感兴趣的话可以去研究pyenchant的官方文档。
 
-####2.2.3 Part-Of-Speech Tagging and POS Tagger(对词进行标注)[1](https://blog.csdn.net/panghaomingme/article/details/55210491)
+#### 2.2.3 Part-Of-Speech Tagging and POS Tagger(对词进行标注)[1](https://blog.csdn.net/panghaomingme/article/details/55210491)
 
 lemmatization在词性标注后效果比较好。
 
@@ -107,7 +107,7 @@ lemmatization在词性标注后效果比较好。
     pos_tag = nltk.pos_tag(sent_tokenize_list)  
     print(pos_tag)  
 
-####2.2.4 Stemming / Lemmatization 词干提取/词形还原
+#### 2.2.4 Stemming / Lemmatization 词干提取/词形还原
 
 Lemmas differ from stems in that a lemma is a canonical form of the word, while a stem may not be a real word.[English Stemmers and Lemmatizers](http://text-processing.com/demo/stem/)
 
@@ -171,11 +171,11 @@ Lemmas differ from stems in that a lemma is a canonical form of the word, while 
             res.append(lemmatizer.lemmatize(word, pos=wordnet_pos))
         return res
 
-####2.2.5 Set All Characters to Lowercase 转化为小写
+#### 2.2.5 Set All Characters to Lowercase 转化为小写
 
 由于英文单词有大小写之分，我们期望统计时像“Home”和“home”是一个词。因此一般需要将所有的词都转化为小写。这个直接用python的API（.lower()）就可以搞定。
 
-####2.2.6 Remove Stop Words 去除停用词
+#### 2.2.6 Remove Stop Words 去除停用词
 
 在英文文本中有很多无效的词，比如“a”，“to”，一些短词，还有一些标点符号，这些我们不想在文本分析的时候引入，因此需要去掉，这些词就是停用词。个人常用的英文停用词表下载地址在这。当然也有其他版本的停用词表，不过这个版本是我常用的。
 
@@ -188,18 +188,18 @@ Lemmas differ from stems in that a lemma is a canonical form of the word, while 
         filtered = [w for w in word if (w not in cachedStopWords)]
         wordStoped.append(filtered)
 
-##3. Data Exploration & Visualization 特征处理
+## 3. Data Exploration & Visualization 特征处理
 
 现在我们就可以用scikit-learn来对我们的文本特征进行处理了，在文本挖掘预处理之向量化与Hash Trick中，我们讲到了两种特征处理的方法，向量化与Hash Trick。而向量化是最常用的方法，因为它可以接着进行TF-IDF的特征处理。在文本挖掘预处理之TF-IDF中，我们也讲到了TF-IDF特征处理的方法。
 
 
 TfidfVectorizer类可以帮助我们完成向量化，TF-IDF和标准化三步。当然，还可以帮我们处理停用词。这部分工作和中文的特征处理也是完全相同的，大家参考前文即可。
 
-##4. Model Building & Evaluation 建立分析模型
+## 4. Model Building & Evaluation 建立分析模型
 
 有了每段文本的TF-IDF的特征向量，我们就可以利用这些数据建立分类模型，或者聚类模型了，或者进行主题模型的分析。此时的分类聚类模型和之前讲的非自然语言处理的数据分析没有什么两样。因此对应的算法都可以直接使用。
 
-##Reference
+## Reference
 
 [英文文本挖掘预处理流程总结][1]
 [A General Approach to Preprocessing Text Data][2]
