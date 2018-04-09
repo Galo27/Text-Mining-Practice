@@ -1,7 +1,7 @@
 # Text-Mining-Practice
 Coding Practice on Text Mining Using Python
 
-# English Text Mining: Preprocessing 
+# Part2: English Text Mining: Preprocessing 
 
 文章主干来自下面Reference中的博客，我自己进行了增加整理，感谢所有分享知识的大佬们= =
 [博客地址](https://blog.csdn.net/Galoa/article/details/79859215)
@@ -209,3 +209,19 @@ TfidfVectorizer类可以帮助我们完成向量化，TF-IDF和标准化三步�
 
 [1]: http://www.cnblogs.com/pinard/p/6756534.html/ "英文文本挖掘预处理流程总结"
 [2]: https://www.kdnuggets.com/2017/12/general-approach-preprocessing-text-data.html "A General Approach to Preprocessing Text Data"
+
+# Part3: 基于朴素贝叶斯+Python实现垃圾邮件分类
+
+## 朴素贝叶斯原理
+
+请参考： [贝叶斯推断及其互联网应用（二）：过滤垃圾邮件](http://www.ruanyifeng.com/blog/2011/08/bayesian_inference_part_two.html)
+
+## Python实现
+
+源代码主干来自： [python实现贝叶斯推断——垃圾邮件分类](https://blog.csdn.net/AlanConstantineLau/article/details/71694660?ref=myread)
+
+我只是加了注释，然后做了对结果的分析统计的输出添加。
+
+源码下载： [GitHub：下载NaiveBayesEmail.py](https://github.com/Galo27/Text-Mining-Practice)
+
+本文原载： [基于朴素贝叶斯+Python实现垃圾邮件分类](https://blog.csdn.net/Galoa/article/details/79871992)
