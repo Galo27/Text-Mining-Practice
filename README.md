@@ -4,7 +4,7 @@ Coding Practice on Text Mining Using Python
 # Part2: English Text Mining: Preprocessing 文本挖掘的数据预处理
 
 文章主干来自下面Reference中的博客，我自己进行了增加整理，感谢所有分享知识的大佬们= =
-[博客地址](https://blog.csdn.net/Galoa/article/details/79859215)
+[本文原载](https://blog.csdn.net/Galoa/article/details/79859215)
 
 ## 1. Data Collection or Assembly 数据收集
 
