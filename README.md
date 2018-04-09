@@ -1,6 +1,20 @@
 # Text-Mining-Practice
 Coding Practice on Text Mining Using Python
 
+# Part1: Crawler Python爬虫: 单网页 所有静态网页 动态网页爬取
+
+所有页代码主干均来自网上！！！感谢大佬们。因为时间久远，有一部分代码来源博客忘记了，非常抱歉！IG的代码主干来源如下：
+
+[Python爬虫--爬取孙艺珍Instagram上的照片和视频](https://htxf.github.io/2017/03/29/Python%E7%88%AC%E8%99%AB-%E7%88%AC%E5%8F%96%E5%AD%99%E8%89%BA%E7%8F%8DInstagram%E4%B8%8A%E7%9A%84%E7%85%A7%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91/)
+
+[爬虫源码POST方式htxf/ig_user_crawler](https://github.com/htxf/ig_user_crawler/blob/master/ig_syz.py)
+
+[python爬取Instagram的某一tag内容](http://blog.csdn.net/geng333abc/article/details/79403395)
+
+[爬虫源码爬tag anonymouslycn/Instagrambot/isn.py](https://github.com/anonymouslycn/Instagrambot/blob/master/isn.py)
+
+[本部分原载](https://blog.csdn.net/Galoa/article/details/79873163)
+
 # Part2: English Text Mining: Preprocessing 文本挖掘的数据预处理
 
 文章主干来自下面Reference中的博客，我自己进行了增加整理，感谢所有分享知识的大佬们= =
