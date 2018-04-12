@@ -1,7 +1,7 @@
 # Text-Mining-Practice
 Coding Practice on Text Mining Using Python
 
-<!-- [TOC]-->
+[TOC]
 
 # Part1: Crawler Python爬虫: 单网页 所有静态网页 动态网页爬取
 
