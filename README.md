@@ -1,6 +1,8 @@
 # Text-Mining-Practice
 Coding Practice on Text Mining Using Python
 
+<!-- [TOC]-->
+
 # Part1: Crawler Python爬虫: 单网页 所有静态网页 动态网页爬取
 
 [本部分原载](https://blog.csdn.net/Galoa/article/details/79873163)
